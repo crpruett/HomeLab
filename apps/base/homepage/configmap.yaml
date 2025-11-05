@@ -19,20 +19,25 @@ data:
     - Developer:
         - Github:
             - abbr: GH
-              href: https://github.com/
+              href: https://github.com/crpruett
+    - Social:
+        - LinkedIn
+            - abbr: LinkedIn
+            href: https://www.linkedin.com/in/crpruett/
+            description: Check out my LinkedIn!
   services.yaml: |
-    - My First Group:
-        - My First Service:
-            href: http://localhost/
-            description: Homepage is awesome
+    - HubPages:
+        - Grafana:
+            href: http://localhost:3000
+            description: Grafana
 
-    - My Second Group:
-        - My Second Service:
-            href: http://localhost/
-            description: Homepage is the best
+    - Services:
+        - Mealie:
+            href: http://localhost:9000
+            description: I love food
 
-    - My Third Group:
-        - My Third Service:
+    - Reports:
+        - ReportServiceComing:
             href: http://localhost/
             description: Homepage is 😎
   widgets.yaml: |
@@ -59,3 +64,4 @@ data:
         target: _blank
 
   docker.yaml: ""
+

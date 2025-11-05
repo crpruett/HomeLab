@@ -24,7 +24,7 @@ spec:
       enableServiceLinks: true
       containers:
         - name: homepage
-          image: "ghcr.io/gethomepage/homepage:latest"
+          image: "ghcr.io/gethomepage/homepage:v1.5.0"
           imagePullPolicy: Always
           env:
             - name: HOMEPAGE_ALLOWED_HOSTS
@@ -65,4 +65,5 @@ spec:
           configMap:
             name: homepage
         - name: logs
+
           emptyDir: {}

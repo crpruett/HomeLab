@@ -22,9 +22,9 @@ data:
               href: https://github.com/crpruett
     - Social:
         - LinkedIn
-            - abbr: LinkedIn
-            href: https://www.linkedin.com/in/crpruett/
-            description: Check out my LinkedIn!
+              - abbr: LinkedIn
+              href: https://www.linkedin.com/in/crpruett/
+              description: Check out my LinkedIn!
   services.yaml: |
     - HubPages:
         - Grafana:
@@ -64,4 +64,5 @@ data:
         target: _blank
 
   docker.yaml: ""
+
 

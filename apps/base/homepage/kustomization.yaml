@@ -3,9 +3,9 @@ kind: Kustomization
 resources:
   - deployment.yaml
   - namespace.yaml
-  - ClusterRole.yaml
-  - ConfigMap.yaml
-  - Secret.yaml
-  - Service.yaml
-  - ServiceAccount.yaml
-  - Ingress.yaml
+  - clusterrole.yaml
+  - configmap.yaml
+  - secret.yaml
+  - service.yaml
+  - serviceaccount.yaml
+  - ingress.yaml

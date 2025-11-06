@@ -23,8 +23,6 @@ spec:
       dnsPolicy: ClusterFirst
       enableServiceLinks: true
       containers:
-          securityContext:
-            allowPrivilegeEscalation: False
         - name: homepage
           image: "ghcr.io/gethomepage/homepage:v1.5.0"
           imagePullPolicy: Always
@@ -69,6 +67,7 @@ spec:
         - name: logs
 
           emptyDir: {}
+
 
 
 

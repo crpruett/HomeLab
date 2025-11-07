@@ -15,11 +15,15 @@ rules:
     verbs:
       - get
       - list
+      - watch
   - apiGroups:
       - extensions
       - networking.k8s.io
+      - metrics.k8s.io
     resources:
       - ingresses
+      - pods
+      - nodes
     verbs:
       - get
       - list
@@ -63,3 +67,4 @@ subjects:
     name: homepage
 
     namespace: default
+

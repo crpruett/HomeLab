@@ -32,10 +32,10 @@ spec:
           imagePullPolicy: Always
           env:
             - name: HOMEPAGE_ALLOWED_HOSTS
-              value: "*" # required, may need port. See gethomepage.dev/installation/#homepage_allowed_hosts
+              value: "localhost,127.0.0.1" # required, may need port. See gethomepage.dev/installation/#homepage_allowed_hosts
           ports:
             - name: http
-              containerPort: 3000
+              containerPort: 9090
               protocol: TCP
           securityContext:
               allowPrivilegeEscalation: False
@@ -73,6 +73,7 @@ spec:
         - name: logs
 
           emptyDir: {}
+
 
 
 

@@ -23,5 +23,6 @@ spec:
                 name: homepage
                 port:
 
-                  number: 9090
+                  number: 3000
+
 

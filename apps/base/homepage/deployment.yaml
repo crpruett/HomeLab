@@ -22,17 +22,23 @@ spec:
       automountServiceAccountToken: true
       dnsPolicy: ClusterFirst
       enableServiceLinks: true
+      securityContext:
+        fsGroup: 1000
+        runAsUser: 1000
+        runAsGroup: 1000
       containers:
         - name: homepage
           image: "ghcr.io/gethomepage/homepage:v1.5.0"
           imagePullPolicy: Always
           env:
             - name: HOMEPAGE_ALLOWED_HOSTS
-              value: "localhost,127.0.0.1" # required, may need port. See gethomepage.dev/installation/#homepage_allowed_hosts
+              value: "localhost:9090,127.0.0.1:9090" # required, may need port. See gethomepage.dev/installation/#homepage_allowed_hosts
           ports:
             - name: http
               containerPort: 3000
               protocol: TCP
+          securityContext:
+              allowPrivilegeEscalation: False
           volumeMounts:
             - mountPath: /app/config/custom.js
               name: homepage-config
@@ -67,6 +73,7 @@ spec:
         - name: logs
 
           emptyDir: {}
+
 
 
 

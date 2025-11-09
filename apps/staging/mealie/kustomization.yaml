@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - ../../base/mealie
   - cloudflare.yaml
+  - test-secret.yaml

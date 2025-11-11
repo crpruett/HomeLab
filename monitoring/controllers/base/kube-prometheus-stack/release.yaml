@@ -27,18 +27,9 @@ spec:
     values:
       grafana:
         adminPassword: ginrai
- 				ingress:
-					enabled: true
-					ingressClassName: traefik
-					hosts:
-						- grs.crpruett.net
-					tls: []	
-  driftDetection:
-    mode: enabled
-    ignore:
-      - paths: ["/metadata/annotations/prometheus-operator-validated"]
-        target:
-          kind: PrometheusRule
-  values:
-    grafana:
-      adminPassword: ginrai
+ 		ingress:
+		  enabled: true
+     	  ingressClassName: traefik
+		  hosts:
+			- grs.crpruett.net
+		  tls: []	

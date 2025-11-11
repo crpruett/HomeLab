@@ -18,6 +18,7 @@ spec:
     crds: Create
   upgrade:
     crds: CreateReplace
+<<<<<<< HEAD
     driftDetection:
       mode: enable
       ignore:
@@ -33,3 +34,14 @@ spec:
 					hosts:
 						- grs.crpruett.net
 					tls: []	
+=======
+  driftDetection:
+    mode: enabled
+    ignore:
+      - paths: ["/metadata/annotations/prometheus-operator-validated"]
+        target:
+          kind: PrometheusRule
+  values:
+    grafana:
+      adminPassword: ginrai
+>>>>>>> 6aacd49c10173fb44d96246855a2ec5dfd210867

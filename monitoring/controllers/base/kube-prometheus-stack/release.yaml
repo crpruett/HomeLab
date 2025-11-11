@@ -27,3 +27,9 @@ spec:
   values:
     grafana:
       adminPassword: ginrai
+      ingress:
+        enabled: true
+        ingressClassName: traefik
+        hosts:
+          - grs.crpruett.net
+        tls: []

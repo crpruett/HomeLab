@@ -4,6 +4,7 @@ data:
 kind: Secret
 metadata:
     name: renovate-container-evn
+    namespace: flux-system
 sops:
     age:
         - recipient: age1r2y0yv7uutp87hv2kv725jk42sed3jucnkczapay20mvgcj24y8szx54dm

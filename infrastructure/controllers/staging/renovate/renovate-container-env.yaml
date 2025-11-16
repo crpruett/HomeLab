@@ -3,7 +3,7 @@ data:
     RENOVATE_TOKEN: ENC[AES256_GCM,data:W9K3L+BDiymdv7HoE+bfnKF58Z2I1KYe7Bh5Thakz9kSIzf9fC6y2HqlJfbMuc1Pni9UgzsV6J4=,iv:v+ecCe3UWKAT8NRaNgdrYHvLJ2aF23B6wYz6zgHHN08=,tag:5vRIrl2V59QQGyFS5LOeZA==,type:str]
 kind: Secret
 metadata:
-    name: renovate-container-evn
+    name: renovate-container-env
     namespace: flux-system
 sops:
     age:

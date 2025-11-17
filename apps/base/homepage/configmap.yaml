@@ -25,21 +25,29 @@ data:
             - abbr: LinkedIn
               href: https://linkedin.com/in/crpruett
   services.yaml: |
-    - HubPages:
+    - HomeLab:
         - Grafana:
             href: http://localhost:3000
             description: Grafana
         - Homarr:
             href: https://localhost:7575
             description: Homarr
-
-    - Services:
         - Mealie:
             href: http://localhost:9000
             description: I love food
 
-    - Reports:
+    - Consuming:
+        - Destructoid:
+            href: https://www.destructoid.com/
+            description: Gaming/Cyber News
+
+    - Socials:
         - ReportServiceComing:
+            href: http://localhost/
+            description: Homepage is 😎
+
+    - Misc:
+        - WutPutHere:
             href: http://localhost/
             description: Homepage is 😎
   widgets.yaml: |
@@ -66,6 +74,7 @@ data:
         target: _blank
 
   docker.yaml: ""
+
 
 
 

@@ -29,6 +29,9 @@ data:
         - Grafana:
             href: http://localhost:3000
             description: Grafana
+        - Homarr:
+            href: https://localhost:7575
+            description: Homarr
 
     - Services:
         - Mealie:
@@ -63,6 +66,7 @@ data:
         target: _blank
 
   docker.yaml: ""
+
 
 
 

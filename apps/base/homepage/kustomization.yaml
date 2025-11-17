@@ -8,4 +8,4 @@ resources:
   - secret.yaml
   - service.yaml
   - serviceaccount.yaml
-  - ingress.yaml
+  #- ingress.yaml

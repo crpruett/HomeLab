@@ -12,6 +12,7 @@ metadata:
     gethomepage.dev/icon: homepage.png
     gethomepage.dev/name: Homepage
 spec:
+  IngressClassName: traefik
   rules:
     - host: "homepage.my.network"
       http:
@@ -24,6 +25,7 @@ spec:
                 port:
 
                   number: 9090
+
 
 
 

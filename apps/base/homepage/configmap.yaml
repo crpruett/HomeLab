@@ -34,6 +34,9 @@ data:
         - Destructoid:
             href: https://www.destructoid.com/
             description: Gaming/Cyber News
+        - Youtube:
+            href: https://www.youtube.com
+            icon: youtube
     - Publishing:
         - LinkedIn:
             href: https://linkedin.com/in/crpruett
@@ -79,6 +82,7 @@ data:
         target: _blank
 
   docker.yaml: ""
+
 
 
 

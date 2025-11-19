@@ -80,7 +80,7 @@ data:
 
     ingress:
     - hostname: mealie.crpruett.net
-      service: http://mealie:9000
+      service: http://mealie.mealie.svc.cluster.local:9000
     - hostname: homepage.crpruett.net
       service: http://homepage.homepage.svc.cluster.local:4000
       

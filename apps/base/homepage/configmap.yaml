@@ -29,11 +29,8 @@ data:
         - Grafana:
             href: http://localhost:3000
             description: Grafana
-        - Homarr:
-            href: https://localhost:7575
-            description: Homarr
         - Mealie:
-            href: http://localhost:9000
+            href: https://mealie.crpruett.com
             description: I love food
 
     - Consuming:
@@ -74,6 +71,7 @@ data:
         target: _blank
 
   docker.yaml: ""
+
 
 
 

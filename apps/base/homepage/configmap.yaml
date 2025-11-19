@@ -25,9 +25,11 @@ data:
         - Grafana:
             href: http://localhost:3000
             description: Grafana
+            icon: grafana
         - Mealie:
             href: https://mealie.crpruett.com
             description: I love food
+            icon: mealie
 
     - Consuming:
         - Destructoid:
@@ -36,20 +38,25 @@ data:
         - Youtube
             href: https://www.youtube.com
             description: The Tube of You
+            icon: youtube
 
     - Publishing:
         - LinkedIn:
             href: https://linkedin.com/in/crpruett
             description: LinkedIn
+            icon: linkedin
         - Twitter/X:
             href: https://x.com/LogosArete
             description: TwitX
+            icon: twitter
         - Substack:
             href: https://substack.com/@crpruett
             description: Substack
+            icon: substack
         - Youtube Creator:
             href: https://www.youtube.com/@democracyofthedead9282
             description: Classic Youtube Account
+            icon: youtube
 
     - Misc:
         - WutPutHere:
@@ -79,6 +86,7 @@ data:
         target: _blank
 
   docker.yaml: ""
+
 
 
 

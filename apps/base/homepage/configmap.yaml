@@ -30,7 +30,6 @@ data:
             href: https://mealie.crpruett.com
             description: I love food
             icon: mealie
-
     - Consuming:
         - Destructoid:
             href: https://www.destructoid.com/
@@ -39,7 +38,6 @@ data:
             href: https://www.youtube.com
             description: The Tube of You
             icon: youtube
-
     - Publishing:
         - LinkedIn:
             href: https://linkedin.com/in/crpruett
@@ -57,7 +55,6 @@ data:
             href: https://www.youtube.com/@democracyofthedead9282
             description: Classic Youtube Account
             icon: youtube
-
     - Misc:
         - WutPutHere:
             href: http://localhost/
@@ -86,6 +83,7 @@ data:
         target: _blank
 
   docker.yaml: ""
+
 
 
 

@@ -34,6 +34,7 @@ data:
         - Destructoid:
             href: https://www.destructoid.com/
             description: Gaming/Cyber News
+            icon: si-robotframework
         - Youtube:
             href: https://www.youtube.com
             icon: youtube
@@ -82,6 +83,7 @@ data:
         target: _blank
 
   docker.yaml: ""
+
 
 
 

@@ -20,10 +20,6 @@ data:
         - Github:
             - abbr: GH
               href: https://github.com/crpruett
-    - Social:
-        - LinkedIn:
-            - abbr: LinkedIn
-              href: https://linkedin.com/in/crpruett
   services.yaml: |
     - HomeLab:
         - Grafana:
@@ -37,11 +33,23 @@ data:
         - Destructoid:
             href: https://www.destructoid.com/
             description: Gaming/Cyber News
+        - Youtube
+            href: https://www.youtube.com
+            description: The Tube of You
 
-    - Socials:
-        - ReportServiceComing:
-            href: http://localhost/
-            description: Homepage is 😎
+    - Publishing:
+        - LinkedIn:
+            href: https://linkedin.com/in/crpruett
+            description: LinkedIn
+        - Twitter/X:
+            href: https://x.com/LogosArete
+            description: TwitX
+        - Substack:
+            href: https://substack.com/@crpruett
+            description: Substack
+        - Youtube Creator:
+            href: https://www.youtube.com/@democracyofthedead9282
+            description: Classic Youtube Account
 
     - Misc:
         - WutPutHere:
@@ -71,6 +79,7 @@ data:
         target: _blank
 
   docker.yaml: ""
+
 
 
 

@@ -49,11 +49,11 @@ data:
         - Substack:
             href: https://substack.com/@crpruett
             description: Substack
-            icon: substack
+            icon: si-substack
         - Youtube Creator:
             href: https://www.youtube.com/@democracyofthedead9282
             description: Classic Youtube Account
-            icon: youtube
+            icon: si-youtubestudio
     - Misc:
         - WutPutHere:
             href: http://localhost/
@@ -82,6 +82,7 @@ data:
         target: _blank
 
   docker.yaml: ""
+
 
 
 

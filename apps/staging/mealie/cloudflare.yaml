@@ -79,8 +79,6 @@ data:
     no-autoupdate: true
 
     ingress:
-   # - hostname: ldpi.crpruett.net
-   #   service: http://mealie:9000
     - hostname: mealie.crpruett.net
       service: http://mealie:9000
     - hostname: homepage.crpruett.net

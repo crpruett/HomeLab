@@ -27,7 +27,7 @@ data:
             description: Grafana
             icon: grafana
         - Mealie:
-            href: https://mealie.crpruett.com
+            href: https://mealie.crpruett.net
             description: I love food
             icon: mealie
     - Consuming:
@@ -83,6 +83,7 @@ data:
         target: _blank
 
   docker.yaml: ""
+
 
 
 

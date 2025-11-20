@@ -23,7 +23,7 @@ data:
   services.yaml: |
     - HomeLab:
         - Grafana:
-            href: http://localhost:3000
+            href: https://grafana.crpruett.net
             description: Grafana
             icon: grafana
         - Mealie:
@@ -83,6 +83,7 @@ data:
         target: _blank
 
   docker.yaml: ""
+
 
 
 

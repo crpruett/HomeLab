@@ -1,0 +1,11 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: kube-prometheus-stack
+spec:
+  values:
+    grafana:
+      grafana.ini:
+        server:
+          root_url: https://grafana.crpruett.net
+          serve_from_sub_path: true

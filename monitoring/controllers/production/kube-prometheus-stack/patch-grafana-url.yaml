@@ -8,4 +8,4 @@ spec:
       grafana.ini:
         server:
           root_url: https://grafana.crpruett.net
-          serve_from_sub_path: true
+          serve_from_sub_path: false

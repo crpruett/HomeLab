@@ -31,7 +31,7 @@ spec:
         server:
           domain: grafana.crpruett.net
           root_url: https://grafana.crpruett.net
-          serve_from_sub_path: false
+          serve_from_sub_path: true
      # ingress:
         #enabled: true
         #ingressClassName: traefik

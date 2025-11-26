@@ -27,10 +27,10 @@ spec:
   values:
     grafana:
       adminPassword: ginrai
-      grafana.Ini:
-        server:
-          domain: grafana.crpruett.net
-          root_url: https://grafana.crpruett.net
+      #grafana.Ini:
+        #server:
+          #domain: grafana.crpruett.net
+          #root_url: https://grafana.crpruett.net
      # ingress:
         #enabled: true
         #ingressClassName: traefik

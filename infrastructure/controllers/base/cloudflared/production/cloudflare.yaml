@@ -78,6 +78,10 @@ data:
     metrics: 0.0.0.0:2000
     no-autoupdate: true
 
+    no-quic: true
+    protocol: http
+    http2-origin: false
+
     ingress:
     - hostname: mealie.crpruett.net
       service: http://mealie.mealie.svc.cluster.local:9000

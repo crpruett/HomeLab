@@ -79,7 +79,6 @@ data:
     no-autoupdate: true
 
     no-quic: true
-    protocol: http
     http2-origin: false
 
     ingress:

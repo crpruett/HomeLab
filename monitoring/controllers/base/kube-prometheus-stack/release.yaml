@@ -8,7 +8,7 @@ spec:
   chart:
     spec:
       chart: kube-prometheus-stack
-      version: "latest" #Could use 66.x, and flux will only update based upon the major version. 66.* works too. 
+      version: "66.x" #Could use 66.x, and flux will only update based upon the major version. 66.* works too. 
       sourceRef:
         kind: HelmRepository
         name: kube-prometheus-stack

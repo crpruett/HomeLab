@@ -5,4 +5,4 @@ metadata:
   namespace: monitoring
 spec:
   interval: 24h
-  url: https://grafana.github.io/helm-charts
+  url: https://github.com/grafana/loki/tree/main/production/helm/loki

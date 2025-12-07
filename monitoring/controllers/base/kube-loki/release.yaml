@@ -1,37 +1,24 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: kube-prometheus-stack
+  name: kube-loki-grafana
   namespace: monitoring
 spec:
   interval: 30m
   chart:
     spec:
-      chart: kube-prometheus-stack
-      version: "66.x" #Could use 66.x, and flux will only update based upon the major version. 66.* works too. 
+      chart: kube-loki-grafana
+      version: "5.x.x" #Could use 66.x, and flux will only update based upon the major version. 66.* works too. 
       sourceRef:
         kind: HelmRepository
-        name: kube-prometheus-stack
-        namespace: monitoring
+        name: grafana
+        namespace: flux-system
       interval: 12h
-  install:
-    crds: Create
-  upgrade:
-    crds: CreateReplace
-  driftDetection:
-    mode: enabled
-    ignore:
-      - paths: ["/metadata/annotations/prometheus-operator-validated"]
-        target:
-          kind: PrometheusRule
   values:
-    grafana:
-      adminPassword: ginrai
-      grafana.ini:
-        server:
-          domain: grafana.crpruett.net
-          root_url: https://grafana.crpruett.net
-          serve_from_sub_path: false
+    persistence:
+      enabled: true
+      size: 10Gi
+      storageClassName: "standard"
      # ingress:
         #enabled: true
         #ingressClassName: traefik

@@ -8,3 +8,11 @@ jobs:
       - uses: actions/checkout@v3
       - name: yaml-lint
         uses: ibiqlik/action-yamllint@v3
+
+      - run: echo ${{ steps.yaml-lint.outputs.logfile }}
+
+      - uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: yamllint-logfile
+          path: ${{ steps.yaml-lint.outputs.logfile }}

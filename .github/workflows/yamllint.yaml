@@ -1,7 +1,5 @@
 ---
 name: Yaml Lint
-rules:
-  indentation: disable
 on: [push]  # yamllint disable-line rule:truthy
 jobs:
   lintAllTheThings:

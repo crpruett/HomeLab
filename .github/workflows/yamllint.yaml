@@ -1,5 +1,5 @@
 ---
-# yamllint disable rule:colons
+# yamllint disable rule:indentation
 name: Yaml Lint
 on: [push]  # yamllint disable-line rule:truthy
 jobs:

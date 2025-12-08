@@ -1,5 +1,5 @@
 ---
-# yamllint disable
+# yamllint disable rule:colons
 name: Yaml Lint
 on: [push]  # yamllint disable-line rule:truthy
 jobs:

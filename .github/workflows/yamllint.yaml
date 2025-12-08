@@ -1,4 +1,5 @@
 ---
+# yamllint disable
 name: Yaml Lint
 on: [push]  # yamllint disable-line rule:truthy
 jobs:

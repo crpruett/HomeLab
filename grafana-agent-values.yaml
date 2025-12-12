@@ -1,0 +1,21 @@
+logs:
+  enabled: true
+  configs:
+    - name: default
+      clients:
+        - url: http://loki.monitoring.svc.cluster.local:3100/loki/api/v1/push
+      positions:
+        filename: /tmp/positions.yaml
+      scrape_configs:
+        - job_name: kubernetes-pods-loki
+          pipeline_stages:
+            - docker: {}
+          static_configs:
+            - targets: ['localhost']
+              labels:
+                job: varlogs
+                __path__: /var/log/pods/*/*/*.log
+
+service:
+  enabled: true
+  type: ClusterIP

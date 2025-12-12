@@ -1,0 +1,1 @@
+{"result":null,"success":false,"errors":[{"code":7003,"message":"Could not route to /client/v4/zones/zone_id/settings/minify, perhaps your object identifier is invalid?"}],"messages":[]}

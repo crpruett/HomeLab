@@ -4525,7 +4525,6 @@ spec:
             memory: 64Mi
         securityContext:
           allowPrivilegeEscalation: false
-          runAsUser: 1000
           capabilities:
             drop:
             - ALL
@@ -6006,7 +6005,6 @@ spec:
             memory: 64Mi
         securityContext:
           allowPrivilegeEscalation: false
-          runAsUser: 1000
           capabilities:
             drop:
             - ALL
@@ -8744,7 +8742,6 @@ spec:
             memory: 64Mi
         securityContext:
           allowPrivilegeEscalation: false
-          runAsUser: 1000
           capabilities:
             drop:
             - ALL
@@ -10177,7 +10174,6 @@ spec:
             memory: 64Mi
         securityContext:
           allowPrivilegeEscalation: false
-          runAsUser: 1000
           capabilities:
             drop:
             - ALL

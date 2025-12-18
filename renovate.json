@@ -4,6 +4,8 @@
     "**/base/**",
     "**/flux-system/**"
   ],
+  "matchUpdateTypes": ["patch","minor"],
+  "matchUpdateTypes": ["major"],
   "kubernetes": {
     "fileMatch": [
       "\\.yaml$"

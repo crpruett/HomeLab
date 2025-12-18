@@ -40,7 +40,7 @@ It serves as the foundation for production-style cluster behavior, offering:
 
 The cluster currently includes:
 
-- **Monitoring and Observability:** Prometheus + Grafana  
+- **Monitoring and Observability:** Prometheus + Grafana + Loki
 - **GitOps Automation:** FluxCD fully deployed  
 - **Persistent Storage:** Configured for cluster workloads  
 - **Load Balancing:** Multiple load balancers in place for service routing  

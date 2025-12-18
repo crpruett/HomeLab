@@ -10,7 +10,6 @@
       "matchUpdateTypes": ["patch","minor"],
       "automerge": true,
       "automergeType": "pr",
-      "platformAutomerge": true
     },
     {
       "description": "Don't automerge major updates",

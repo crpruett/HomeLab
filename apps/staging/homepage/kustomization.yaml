@@ -3,3 +3,6 @@ kind: Kustomization
 namespace: homepage
 resources: 
   - ../../base/homepage/
+images: 
+  - name: ghcr.io/gethomepage/homepage
+    newTag: v1.8.0

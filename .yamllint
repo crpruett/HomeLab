@@ -28,3 +28,5 @@ rules:
   truthy: disable
   new-lines:
     level: warning
+  trailing-spaces:
+    level: warning

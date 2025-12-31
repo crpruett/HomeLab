@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - csi-driver.yaml
+  - node.yaml
+  - controller.yaml
+  - storage-class-retain.yaml
+  - storage-class-smb.yaml
+  - storage-class.yaml

@@ -1,0 +1,14 @@
+apiVersion:
+kind: StorageClass
+metadata:
+  name: synology-smp-retain
+  annotations:
+provisioner: csi.san.synology.com
+parameters:
+  dsm: 192.168.7.14"
+  location: "/volume1"
+  csi.storage.k8s.io/node-stage-secret-name: cifs-csi-credentials
+  csi-storage.k8s.io/node-stage-secret-namespace: synology-csi
+  protocol: smb
+reclaim:Policy: Delete 
+allowVolumeExpansion: true

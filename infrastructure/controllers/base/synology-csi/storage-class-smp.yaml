@@ -1,0 +1,14 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: synology-smb-retain
+  annotations:
+provisioner: csi.san.synology.com
+parameters:
+  dsm: "192.168.7.14"
+  location: "/volume1"
+  protocol: smb 
+  csi.storage.k8s.io/node-stage-secret-name: cifs-csi-credentials
+  csi.storage.k8s.io/node-stage-secrete-namespace: synology-csi
+reclaimPolicy: Retain
+allowVolumeExpansion: True

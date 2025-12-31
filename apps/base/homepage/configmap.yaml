@@ -30,7 +30,6 @@ data:
             href: https://mealie.crpruett.net
             description: I love food
             icon: mealie
-
         - Synology:
             href: https://crpruett.us1.quickconnect.to/#/signin
             description: Synology NAS DS225+
@@ -89,6 +88,7 @@ data:
         target: _blank
 
   docker.yaml: ""
+
 
 
 

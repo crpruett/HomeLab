@@ -3,9 +3,7 @@ data:
   credentials.json: eyJBY2NvdW50VGFnIjoiYWQxMjkzZjJkMDdlM2ViOTg2MGQ0ZjcxZDI1OTVkOGUiLCJUdW5uZWxTZWNyZXQiOiJsZEdibm5YMzMyT210Nko2RHpDelFvNmxqMmd4Vmg5eGE3M2pwWjBKSGVNPSIsIlR1bm5lbElEIjoiNGMwOWZmNGUtMzRkZS00MTkxLWIwNzYtYTY2N2Q3NzBlNjM1IiwiRW5kcG9pbnQiOiIifQ==
 kind: Secret
 metadata:
-  creationTimestamp: "2025-12-30T21:11:18Z"
   name: tunnel-creds
   namespace: cloudflared
   resourceVersion: "3675"
-  uid: efa8f068-93fc-4e58-ad97-2e4b69808195
 type: Opaque

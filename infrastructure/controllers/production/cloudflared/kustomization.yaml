@@ -4,3 +4,4 @@ resources:
   - namespace.yaml
   - test-secret.yaml
   - ../../base/cloudflared/production/
+  - tunnel-creds.yaml

@@ -10,9 +10,10 @@ The environment is built to mirror real infrastructure patterns as closely as po
 The homelab currently consists of:
 
 - **Node 1:** Workstation running Rancher Desktop for a flexible local Kubernetes environment.
-- **Node 2:** Bare-metal Talos Linux machine operating as an immutable Kubernetes node.
+- **Node 2:** Fedora Server node for debugging, stability, and industry standardized compliance.
+- **Node 3:** NixOS for immutable infrastucture and OS-packaging as code. 
 
-This hybrid model provides the convenience of a self-contained development cluster on the workstation alongside the reliability and predictability of a Talos-managed node that behaves like production infrastructure.
+This hybrid model provides the convenience of a self-contained development cluster on the workstation alongside the reliability and predictability of a server and IaC-defined nodes that behaves like production infrastructure.
 
 ---
 

@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-metrics
+  namespace: k-metrics
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8s-metrics
+  template:
+    metadata:
+      labels:
+        app: k8s-metrics
+    spec:
+      serviceAccountName: k8s-metrics-reader
+      containers:
+        - name: kubernetes-metrics
+          image: ghcr.io/crpruett/kubernetes-metrics:kubernetes-metrics-v0.1.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 22112
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 22112
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 22112
+            initialDelaySeconds: 10
+            periodSeconds: 20

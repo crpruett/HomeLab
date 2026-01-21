@@ -34,6 +34,10 @@ data:
             href: https://crpruett.us1.quickconnect.to/#/signin
             description: Synology NAS DS225+
             icon: si-synology
+        - Kubernetes Metrics:
+            href: https://live.cpruett.net/ui
+            description: Python-based Kubernetes Metrics App
+            icon: si-PyG
             
     - Consuming:
         - Destructoid:
@@ -88,6 +92,7 @@ data:
         target: _blank
 
   docker.yaml: ""
+
 
 
 

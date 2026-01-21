@@ -91,7 +91,7 @@ data:
       originRequest:
         httpHostHeader: grafana.crpruett.net
     - hostname: live.crpruett.net
-      service: http://k8-metrics.k-metrics.svc.cluster.local:80
+      service: http://k8s-metrics.k-metrics.svc.cluster.local:80
       
     # This rule sends traffic to the built-in hello-world HTTP server. This can help debug connectivity
     # issues. If hello.example.com resolves and tunnel.example.com does not, then the problem is

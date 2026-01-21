@@ -5,5 +5,7 @@ kind: Secret
 metadata:
   name: tunnel-creds
   namespace: cloudflared
-  resourceVersion: "3675"
+  annotations:
+    kustomize.toolkit.fluxcd.io/force: "true"
+ # resourceVersion: "3675"
 type: Opaque

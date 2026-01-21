@@ -90,7 +90,7 @@ data:
       service: http://kube-prometheus-stack-grafana.monitoring.svc.cluster.local:80
       originRequest:
         httpHostHeader: grafana.crpruett.net
-    - hostname: live.crpruett.net
+    - hostname: live.crpruett.net/ui
       service: http://k8s-metrics.k-metrics.svc.cluster.local:80
       
     # This rule sends traffic to the built-in hello-world HTTP server. This can help debug connectivity

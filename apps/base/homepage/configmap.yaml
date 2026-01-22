@@ -35,7 +35,7 @@ data:
             description: Synology NAS DS225+
             icon: si-synology
         - Kubernetes Metrics:
-            href: https://live.cpruett.net/ui
+            href: https://live.crpruett.net/ui
             description: Python-based Kubernetes Metrics App
             icon: si-PyG
             
@@ -92,6 +92,7 @@ data:
         target: _blank
 
   docker.yaml: ""
+
 
 
 

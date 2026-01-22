@@ -37,7 +37,7 @@ data:
         - Kubernetes Metrics:
             href: https://live.crpruett.net/ui
             description: Python-based Kubernetes Metrics App
-            icon: si-PyG
+            icon: si-pyg
             
     - Consuming:
         - Destructoid:
@@ -92,6 +92,7 @@ data:
         target: _blank
 
   docker.yaml: ""
+
 
 
 

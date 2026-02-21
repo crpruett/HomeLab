@@ -8,7 +8,7 @@
     {
       "description": "Automerge patch/minor updates after CI passes",
       "matchUpdateTypes": ["patch","minor"],
-      "automerge": false,
+      "automerge": true,
       "automergeType": "pr"
     },
     {

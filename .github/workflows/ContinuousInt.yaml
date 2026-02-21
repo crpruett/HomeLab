@@ -11,4 +11,5 @@ jobs:
         run: pip install yamllint
 
       - name: Lint YAML files
-        run: yamllint -c ./.yamllint .
+        run: yamllint $(git ls-files '*.yml' '*.yaml')
+        #run: yamllint -c ./.yamllint .

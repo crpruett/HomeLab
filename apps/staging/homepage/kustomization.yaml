@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: homepage
 resources: 
   - ../../base/homepage/
-  #- configmap.yaml
+  - configmap.yaml
 images: 
   - name: ghcr.io/gethomepage/homepage
     newTag: v1.10.1

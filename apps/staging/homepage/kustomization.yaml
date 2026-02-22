@@ -3,7 +3,25 @@ kind: Kustomization
 namespace: homepage
 resources: 
   - ../../base/homepage/
-  - configmap.yaml
 images: 
   - name: ghcr.io/gethomepage/homepage
     newTag: v1.10.1
+
+patches:
+  - target: 
+      kind: ConfigMap
+      name: homepage
+      namespace: homepage
+    patch: |-
+      apiVersion: v1
+      kind: ConfigMap
+      metadata:
+        name: homepage
+        namespace: homepage
+      data:
+        services.yaml: |
+          - HomeLab:
+              - Grafana:
+                  href: https://staging-grafana.crpruett.net
+                  description: Grafana (Staging)
+                  icon: grafana

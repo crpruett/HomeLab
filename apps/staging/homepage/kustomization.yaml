@@ -22,6 +22,48 @@ patches:
         services.yaml: |
           - HomeLab:
               - Grafana:
-                  href: https://staging-grafana.crpruett.net
-                  description: Grafana (Staging)
+                  href: https://grafana.crpruett.net
+                  description: Grafana
                   icon: grafana
+              - Mealie:
+                  href: https://mealie.crpruett.net
+                  description: I love food
+                  icon: mealie
+              - Synology:
+                  href: https://crpruett.us1.quickconnect.to/#/signin
+                  description: Synology NAS DS225+
+                  icon: si-synology
+              - Kubernetes Metrics:
+                  href: https://live.crpruett.net/ui
+                  description: Python-based Kubernetes Metrics App
+                  icon: si-pyg
+            
+          - Consuming:
+              - Destructoid:
+                  href: https://www.destructoid.com/
+                  description: Gaming/Cyber News
+                  icon: si-robotframework
+              - Youtube:
+                  href: https://www.youtube.com
+                  icon: youtube
+          - Publishing:
+              - LinkedIn:
+                  href: https://linkedin.com/in/crpruett
+                  description: LinkedIn
+                  icon: linkedin
+              - Twitter/X:
+                  href: https://x.com/LogosArete
+                  description: TwitX
+                  icon: twitter
+              - Substack:
+                  href: https://substack.com/@crpruett
+                  description: Substack
+                  icon: si-substack
+              - Youtube Creator:
+                  href: https://www.youtube.com/@democracyofthedead9282
+                  description: Classic Youtube Account
+                  icon: si-youtubestudio
+          - Misc:
+              - WutPutHere:
+                  href: http://localhost/
+                  description: Homepage is 😎

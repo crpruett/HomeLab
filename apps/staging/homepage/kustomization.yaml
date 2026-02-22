@@ -22,11 +22,11 @@ patches:
         services.yaml: |
           - HomeLab:
               - Grafana:
-                  href: https://grafana.crpruett.net
+                  href: https://grafana-staging.crpruett.net
                   description: Grafana
                   icon: grafana
               - Mealie:
-                  href: https://mealie.crpruett.net
+                  href: https://mealie-staging.crpruett.net
                   description: I love food
                   icon: mealie
               - Synology:

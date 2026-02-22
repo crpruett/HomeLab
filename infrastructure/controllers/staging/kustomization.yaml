@@ -4,4 +4,4 @@ resources:
   - renovate
   - cloudflared
   - ../base/cilium
-  - synology-csi
+  #- synology-csi

@@ -4,3 +4,4 @@ resources:
   - namespace.yaml
   - test-secret.yaml
   - ../../base/cloudflared/staging/
+  - tunnel-creds.yaml

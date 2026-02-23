@@ -47,7 +47,7 @@ spec:
         receivers:
           - name: pagerduty
             pagerduty_configs:
-              - routing_key: "e47a00f05e334600d0b88294ea28683d"
+              - service_key: "e47a00f05e334600d0b88294ea28683d"
                 severity: '{{ .CommonLabels.severity | default "error" }}'
                 description: '{{ .CommonAnnotations.summary }}'
                 details:

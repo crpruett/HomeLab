@@ -39,21 +39,18 @@ spec:
 
         route:
           receiver: pagerduty
-          group_by: ['alertname', 'cluster', 'namespace']
-          group_wait: 30s
-          group_interval: 5m
-          repeat_interval: 4h
+          group_by: ['alertname']
+          group_wait: 10s
+          group_interval: 1m
+          repeat_interval: 1h
+
+          routes: []
 
         receivers:
           - name: pagerduty
             pagerduty_configs:
               - service_key: "e47a00f05e334600d0b88294ea28683d"
-                severity: '{{ .CommonLabels.severity | default "error" }}'
-                description: '{{ .CommonAnnotations.summary }}'
-                details:
-                  cluster: '{{ .CommonLabels.cluster }}'
-                  namespace: '{{ .CommonLabels.namespace }}'
-                  alertname: '{{ .CommonLabels.alertname }}'
+                send_resolved: true
      # ingress:
         #enabled: true
         #ingressClassName: traefik

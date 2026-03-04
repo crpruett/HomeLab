@@ -3,3 +3,15 @@ kind: Kustomization
 namespace: monitoring
 resources:
   - ../../base/kube-prometheus-stack/
+patches:
+  - target:
+    kind: HelmRelease
+    name: kube-prometheus-stack
+    namespace: monitoring
+  patch: |-
+    - op: replace
+      path: /spec/values/grafnan/grafana.ini/server/domain
+      value: grafana-staging.crpruett.net
+    - op: replace
+      path: /spec/values/grafana/grafana.ini/server/root_url
+      value: https://grafana-staging.crpruett.net

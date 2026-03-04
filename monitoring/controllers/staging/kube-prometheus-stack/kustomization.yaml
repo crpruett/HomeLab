@@ -10,7 +10,7 @@ patches:
     namespace: monitoring
   patch: |-
     - op: replace
-      path: /spec/values/grafnan/grafana.ini/server/domain
+      path: /spec/values/grafana/grafana.ini/server/domain
       value: grafana-staging.crpruett.net
     - op: replace
       path: /spec/values/grafana/grafana.ini/server/root_url

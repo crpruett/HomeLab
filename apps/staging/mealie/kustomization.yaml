@@ -4,4 +4,4 @@ resources:
   - ../../base/mealie
 images: 
   - name: ghcr.io/mealie-recipes/mealie
-    newTag: v3.11.0
+    newTag: v3.12.0

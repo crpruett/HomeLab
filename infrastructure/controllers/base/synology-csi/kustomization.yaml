@@ -4,6 +4,7 @@ resources:
   - csi-driver.yaml
   - node.yaml
   - controller.yaml
+  - client-info-secret.yaml
   - storage-class-retain.yaml
-  - storage-class-smb.yaml
-  - storage-class.yaml
+  #- storage-class-smb.yaml
+  #- storage-class.yaml

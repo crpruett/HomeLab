@@ -5,7 +5,7 @@ metadata:
   annotations:
 provisioner: csi.san.synology.com
 parameters:
-  dsm: "192.168.7.144"
+  dsm: "192.168.7.14"
   location: "/volume1"
   protocol: iscsi
   csi.storage.k8s.io/fstype: ext4

@@ -6,11 +6,7 @@ spec:
   containers:
     - name: migrate
       image: alpine
-<<<<<<< mealie-updates
       command: ["sh", "-c", "cp -av /source/. /dest/ && echo DONE Migrating!"]
-=======
-      command: ["sh", "-c", "cp -av /source/ . /dest/ && echo DONE Migrating!"]
->>>>>>> main
       volumeMounts:
         - name: old-data
           mountPath: /source

@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: migrate-mealie-data
+spec:
+  containers:
+    - name: migrate
+      image: alpine
+      command: ["sh", "-c", "cp -av /source/ . /dest/ && echo DONE Migrating!"]
+      volumeMounts:
+        - name: old-data
+          mountPath: /source
+        - name: new-data
+          mountPath: /dest
+  volumes:
+    - name: old-data
+      hostPath:
+        path: /home/ginrai/k3s-data/storage/pvc-9f08afc0-9d95-44fc-89f5-24919c713d44_mealie_mealie-data
+    - name: new-data
+      persistentVolumeClaim:
+        claimName: mealie-syn-data
+  restartPolicy: Never

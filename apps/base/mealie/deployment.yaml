@@ -6,7 +6,7 @@ metadata:
   name: mealie
   namespace: mealie
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: mealie
@@ -29,4 +29,4 @@ spec:
       volumes:
         - name: mealie-data
           persistentVolumeClaim:
-            claimName: mealie-data
+            claimName: mealie-syn-data

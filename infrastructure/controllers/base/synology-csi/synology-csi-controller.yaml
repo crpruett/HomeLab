@@ -1,0 +1,146 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"apps/v1","kind":"StatefulSet","metadata":{"annotations":{},"name":"synology-csi-controller","namespace":"synology-csi"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"synology-csi-controller"}},"serviceName":"synology-csi-controller","template":{"metadata":{"labels":{"app":"synology-csi-controller"}},"spec":{"containers":[{"args":["--timeout=60s","--csi-address=$(ADDRESS)","--v=5","--extra-create-metadata"],"env":[{"name":"ADDRESS","value":"/var/lib/csi/sockets/pluginproxy/csi.sock"}],"image":"registry.k8s.io/sig-storage/csi-provisioner:v3.0.0","imagePullPolicy":"Always","name":"csi-provisioner","securityContext":{"allowPrivilegeEscalation":true,"capabilities":{"add":["SYS_ADMIN"]},"privileged":true},"volumeMounts":[{"mountPath":"/var/lib/csi/sockets/pluginproxy/","name":"socket-dir"}]},{"args":["--v=5","--csi-address=$(ADDRESS)"],"env":[{"name":"ADDRESS","value":"/var/lib/csi/sockets/pluginproxy/csi.sock"}],"image":"registry.k8s.io/sig-storage/csi-attacher:v3.3.0","imagePullPolicy":"Always","name":"csi-attacher","securityContext":{"allowPrivilegeEscalation":true,"capabilities":{"add":["SYS_ADMIN"]},"privileged":true},"volumeMounts":[{"mountPath":"/var/lib/csi/sockets/pluginproxy/","name":"socket-dir"}]},{"args":["--v=5","--csi-address=$(ADDRESS)"],"env":[{"name":"ADDRESS","value":"/var/lib/csi/sockets/pluginproxy/csi.sock"}],"image":"registry.k8s.io/sig-storage/csi-resizer:v1.3.0","imagePullPolicy":"Always","name":"csi-resizer","securityContext":{"allowPrivilegeEscalation":true,"capabilities":{"add":["SYS_ADMIN"]},"privileged":true},"volumeMounts":[{"mountPath":"/var/lib/csi/sockets/pluginproxy/","name":"socket-dir"}]},{"args":["--nodeid=NotUsed","--endpoint=$(CSI_ENDPOINT)","--client-info","/etc/synology/client-info.yml","--log-level=info"],"env":[{"name":"CSI_ENDPOINT","value":"unix:///var/lib/csi/sockets/pluginproxy/csi.sock"}],"image":"synology/synology-csi:v1.2.1","imagePullPolicy":"IfNotPresent","name":"csi-plugin","securityContext":{"allowPrivilegeEscalation":true,"capabilities":{"add":["SYS_ADMIN"]},"privileged":true},"volumeMounts":[{"mountPath":"/var/lib/csi/sockets/pluginproxy/","name":"socket-dir"},{"mountPath":"/etc/synology","name":"client-info","readOnly":true}]}],"hostNetwork":true,"serviceAccountName":"csi-controller-sa","volumes":[{"emptyDir":{},"name":"socket-dir"},{"name":"client-info","secret":{"secretName":"client-info-secret"}}]}}}}
+  name: synology-csi-controller
+  namespace: synology-csi
+spec:
+  persistentVolumeClaimRetentionPolicy:
+    whenDeleted: Retain
+    whenScaled: Retain
+  podManagementPolicy: OrderedReady
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: synology-csi-controller
+  serviceName: synology-csi-controller
+  template:
+    metadata:
+      labels:
+        app: synology-csi-controller
+    spec:
+      containers:
+      - args:
+        - --timeout=60s
+        - --csi-address=$(ADDRESS)
+        - --v=5
+        - --extra-create-metadata
+        env:
+        - name: ADDRESS
+          value: /var/lib/csi/sockets/pluginproxy/csi.sock
+        image: registry.k8s.io/sig-storage/csi-provisioner:v3.0.0
+        imagePullPolicy: Always
+        name: csi-provisioner
+        resources: {}
+        securityContext:
+          allowPrivilegeEscalation: true
+          capabilities:
+            add:
+            - SYS_ADMIN
+          privileged: true
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/lib/csi/sockets/pluginproxy/
+          name: socket-dir
+      - args:
+        - --v=5
+        - --csi-address=$(ADDRESS)
+        env:
+        - name: ADDRESS
+          value: /var/lib/csi/sockets/pluginproxy/csi.sock
+        image: registry.k8s.io/sig-storage/csi-attacher:v3.3.0
+        imagePullPolicy: Always
+        name: csi-attacher
+        resources: {}
+        securityContext:
+          allowPrivilegeEscalation: true
+          capabilities:
+            add:
+            - SYS_ADMIN
+          privileged: true
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/lib/csi/sockets/pluginproxy/
+          name: socket-dir
+      - args:
+        - --v=5
+        - --csi-address=$(ADDRESS)
+        env:
+        - name: ADDRESS
+          value: /var/lib/csi/sockets/pluginproxy/csi.sock
+        image: registry.k8s.io/sig-storage/csi-resizer:v1.3.0
+        imagePullPolicy: Always
+        name: csi-resizer
+        resources: {}
+        securityContext:
+          allowPrivilegeEscalation: true
+          capabilities:
+            add:
+            - SYS_ADMIN
+          privileged: true
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/lib/csi/sockets/pluginproxy/
+          name: socket-dir
+      - args:
+        - --nodeid=NotUsed
+        - --endpoint=$(CSI_ENDPOINT)
+        - --client-info
+        - /etc/synology/client-info.yml
+        - --log-level=info
+        env:
+        - name: CSI_ENDPOINT
+          value: unix:///var/lib/csi/sockets/pluginproxy/csi.sock
+        image: synology/synology-csi:v1.2.1
+        imagePullPolicy: IfNotPresent
+        name: csi-plugin
+        resources: {}
+        securityContext:
+          allowPrivilegeEscalation: true
+          capabilities:
+            add:
+            - SYS_ADMIN
+          privileged: true
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/lib/csi/sockets/pluginproxy/
+          name: socket-dir
+        - mountPath: /etc/synology
+          name: client-info
+          readOnly: true
+      dnsPolicy: ClusterFirst
+      hostNetwork: true
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: csi-controller-sa
+      serviceAccountName: csi-controller-sa
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - emptyDir: {}
+        name: socket-dir
+      - name: client-info
+        secret:
+          defaultMode: 420
+          secretName: client-info-secret
+  updateStrategy:
+    rollingUpdate:
+      partition: 0
+    type: RollingUpdate
+status:
+  availableReplicas: 1
+  collisionCount: 0
+  currentReplicas: 1
+  currentRevision: synology-csi-controller-74d65d5d76
+  observedGeneration: 1
+  readyReplicas: 1
+  replicas: 1
+  updateRevision: synology-csi-controller-74d65d5d76
+  updatedReplicas: 1

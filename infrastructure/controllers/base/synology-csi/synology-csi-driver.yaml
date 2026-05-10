@@ -1,0 +1,16 @@
+apiVersion: storage.k8s.io/v1
+kind: CSIDriver
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"storage.k8s.io/v1","kind":"CSIDriver","metadata":{"annotations":{},"name":"csi.san.synology.com"},"spec":{"attachRequired":true,"podInfoOnMount":true,"volumeLifecycleModes":["Persistent"]}}
+  name: csi.san.synology.com
+spec:
+  attachRequired: true
+  fsGroupPolicy: ReadWriteOnceWithFSType
+  podInfoOnMount: true
+  requiresRepublish: false
+  seLinuxMount: false
+  storageCapacity: false
+  volumeLifecycleModes:
+  - Persistent

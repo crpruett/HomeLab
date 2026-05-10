@@ -1,10 +1,16 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - csi-driver.yaml
-  - node.yaml
-  - controller.yaml
+  - synology-csi-driver.yaml
+  - synology-csi-node.yaml
+  - synology-csi-controller.yaml
+  - synology-csi-snapshotter.yaml
   - client-info-secret.yaml
   - storage-class-retain.yaml
-  #- storage-class-smb.yaml
-  #- storage-class.yaml
+  - synology-csi-controller-role.yaml
+  - synology-csi-controller-rolebind.yaml
+  - synology-csi-node-role.yaml
+  - synology-csi-node-rolebind.yaml
+  - synology-csi-sa.yaml
+  - synology-csi-snapshotter-role.yaml
+  - synology-csi-snapshotter-rolebind.yaml

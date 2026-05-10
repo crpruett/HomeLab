@@ -6,7 +6,7 @@ spec:
   containers:
     - name: migrate
       image: alpine
-      command: ["sh", "-c", "cp -av /source/. /dest/ && echo DONE Migrating!"]
+      command: ["sh", "-c", "cp -av /source/ . /dest/ && echo DONE Migrating!"]
       volumeMounts:
         - name: old-data
           mountPath: /source

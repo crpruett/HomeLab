@@ -5,7 +5,7 @@ resources:
   - ../../base/homepage/
 images: 
   - name: ghcr.io/gethomepage/homepage
-    newTag: v1.13.0
+    newTag: v1.13.1
 
 patches:
   - target: 

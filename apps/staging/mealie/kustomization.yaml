@@ -4,7 +4,7 @@ resources:
   - ../../base/mealie
 images: 
   - name: ghcr.io/mealie-recipes/mealie
-    newTag: v3.16.0
+    newTag: v3.17.0
 patches:
   - target:
       kind: PersistentVolumeClaim
